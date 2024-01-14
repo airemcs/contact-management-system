@@ -5,6 +5,8 @@ import com.airelle.management.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/contacts")
 public class ContactController {
@@ -12,9 +14,9 @@ public class ContactController {
     @Autowired
     ContactService contactService;
 
-    @GetMapping("/contact")
-    public static String index() {
-        return "Hello!";
+    @GetMapping("")
+    public List<Contact> getContacts() {
+        return contactService.getAll();
     }
 
     @PostMapping("/add")
