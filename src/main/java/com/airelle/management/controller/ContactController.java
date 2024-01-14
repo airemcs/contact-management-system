@@ -19,6 +19,11 @@ public class ContactController {
         return contactService.getAll();
     }
 
+    @GetMapping("/{id}")
+    public Contact getContact(@PathVariable Integer id) {
+        return contactService.get(id);
+    }
+
     @PostMapping("/add")
     public Contact addContact(@RequestBody Contact contact) {
         return contactService.add(contact);

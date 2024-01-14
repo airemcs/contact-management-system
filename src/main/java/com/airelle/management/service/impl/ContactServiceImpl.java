@@ -23,4 +23,9 @@ public class ContactServiceImpl implements ContactService {
     public List<Contact> getAll() {
         return contactRepository.findAll();
     }
+
+    @Override
+    public Contact get(Integer id) {
+        return contactRepository.findById(id).get();
+    }
 }
