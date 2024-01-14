@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Contact Management System</title>
+</head>
+<body><main class="container">
+
+    <nav>
+        <ul>
+            <li>
+            <strong>Maagma Contact Management System</strong>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="index.html" role="button" class="secondary">Add Contact</a></li>
+            <li><a href="view.html" role="button" class="outline secondary">View Contacts</a></li>
+            <li><a href="update.html" role="button" class="outline secondary">Update Contact</a></li>
+            <li><a href="remove.html" role="button" class="outline secondary">Remove Contact</a></li>
+        </ul>
+    </nav>
+    
+    <hr>
+
+    <form id="addContactForm" action="#">
+        <div class="grid">
+            <label for="fullName">
+                Full Name:
+                <input type="text" id="fullName" name="fullName" placeholder="Airelle Loumel Maagma" required>
+            </label>
+            <label for="mobileNumber">
+                Mobile Number:
+                <input type="text" id="mobileNumber" name="mobileNumber" placeholder="09123456789" required>
+            </label>
+        </div>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="emailAddress" name="emailAddress" placeholder="airelle.loumel.maagma@ing.com" required>
+        <button type="submit">Submit</button>
+    </form>
+
+</main></body>
+</html>
