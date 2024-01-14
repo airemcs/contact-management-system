@@ -29,4 +29,14 @@ public class ContactController {
         return contactService.add(contact);
     }
 
+    @PutMapping("/update")
+    public Contact updateContact(@RequestBody Contact contact) {
+        return contactService.update(contact);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public String deleteContact(@PathVariable Integer id) {
+        return contactService.delete(id);
+    }
+
 }

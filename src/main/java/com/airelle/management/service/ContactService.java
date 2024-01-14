@@ -11,5 +11,7 @@ public interface ContactService {
     public Contact add(Contact contact);
     public List<Contact> getAll();
     public Contact get(Integer id);
+    public Contact update(Contact contact);
+    public String delete(Integer id);
 
 }

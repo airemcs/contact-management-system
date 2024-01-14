@@ -28,4 +28,15 @@ public class ContactServiceImpl implements ContactService {
     public Contact get(Integer id) {
         return contactRepository.findById(id).get();
     }
+
+    @Override
+    public Contact update(Contact contact) {
+        return contactRepository.save(contact);
+    }
+
+    @Override
+    public String delete(Integer id) {
+        contactRepository.deleteById(id);
+        return "Deleted";
+    }
 }
